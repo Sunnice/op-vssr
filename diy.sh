@@ -17,7 +17,7 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/tty228/luci-app-serverchan.git package/serverchan
 git clone https://github.com/skyformat99/eqos.git package/eqos
 git clone https://github.com/ElonH/Rclone-OpenWrt.git package/rclone
-git clone https://github.com/Sunnice/luci-app-vssr2.git package/luci-app-vssr-plus
+git clone https://github.com/Sunnice/luci-app-vs.git package/luci-app-firefly
 git clone https://github.com/Leo-Jo-My/diy.git package/diy
 git clone https://github.com/frainzy1477/luci-app-clash.git package/clash
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git package/unblockneteasemusicadvance
