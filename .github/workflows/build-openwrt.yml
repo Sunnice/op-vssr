@@ -61,6 +61,16 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
+           WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
+           LUCIBRANCH="lede" 
+           WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
+           mkdir $WORKINGDIR -p
+           rm $WORKINGDIR/* -fr
+           wget https://github.com/Sunnice/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
+           unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
+           mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
+           rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
+           rm $WORKINGDIR/${LUCIBRANCH}.zip
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
